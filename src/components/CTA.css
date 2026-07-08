@@ -1,0 +1,190 @@
+/* ============================================
+   CTA Section
+   ============================================ */
+.cta {
+  position: relative;
+  padding: 7rem 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ============================================
+   Animated Gradient Background
+   ============================================ */
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #e2e8f0 25%,
+    #f1f5f9 50%,
+    #e2e8f0 75%,
+    #f8fafc 100%
+  );
+  background-size: 300% 300%;
+  animation: ctaGradient 12s ease-in-out infinite;
+}
+
+@keyframes ctaGradient {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+}
+
+.cta__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(37, 99, 235, 0.05) 0%,
+    transparent 60%
+  );
+}
+
+/* ============================================
+   Floating Shapes
+   ============================================ */
+.cta__shapes {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cta__shape {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 54, 93, 0.06);
+}
+
+.cta__shape--1 {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: 10%;
+  background: rgba(37, 99, 235, 0.05);
+  animation: floatShape 15s ease-in-out infinite;
+}
+
+.cta__shape--2 {
+  width: 120px;
+  height: 120px;
+  bottom: -30px;
+  right: 15%;
+  background: rgba(232, 124, 62, 0.05);
+  animation: floatShape 18s ease-in-out infinite reverse;
+}
+
+.cta__shape--3 {
+  width: 80px;
+  height: 80px;
+  top: 30%;
+  right: 8%;
+  background: rgba(212, 151, 42, 0.05);
+  animation: floatShape 12s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.cta__shape--4 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 5%;
+  background: rgba(37, 99, 235, 0.04);
+  animation: floatShape 20s ease-in-out infinite reverse;
+  animation-delay: 4s;
+}
+
+@keyframes floatShape {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(20px, -20px) scale(1.05); }
+  50% { transform: translate(-10px, 15px) scale(0.95); }
+  75% { transform: translate(15px, 10px) scale(1.02); }
+}
+
+/* ============================================
+   Content
+   ============================================ */
+.cta__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta__content > * {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cta__content.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta__content.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.cta__content.is-visible > *:nth-child(2) { transition-delay: 120ms; }
+.cta__content.is-visible > *:nth-child(3) { transition-delay: 240ms; }
+.cta__content.is-visible > *:nth-child(4) { transition-delay: 360ms; }
+
+/* Title */
+.cta__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+/* Subtitle */
+.cta__subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Button */
+.cta__button {
+  font-size: 1.25rem;
+  padding: 1.125rem 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Note */
+.cta__note {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .cta {
+    padding: 5rem 0;
+  }
+
+  .cta__title {
+    font-size: 1.625rem;
+  }
+
+  .cta__subtitle {
+    font-size: 1.0625rem;
+  }
+
+  .cta__button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

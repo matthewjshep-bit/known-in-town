@@ -1,0 +1,131 @@
+.solutions-page {
+  padding-top: 100px; /* Account for navbar */
+  min-height: 100vh;
+  background: var(--bg-dark-2);
+}
+
+.solutions-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.solutions-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.solutions-hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.solutions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 0 6rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.solution-detail {
+  padding: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.solution-detail.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solution-detail__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.solution-detail__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.solution-detail__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.solution-detail__subtitle {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-orange);
+}
+
+.solution-detail__desc {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.solution-detail__features {
+  background: var(--bg-dark);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border: 1px solid rgba(26, 54, 93, 0.08);
+}
+
+.solution-detail__features-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.solution-detail__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.solution-detail__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--text-main);
+  font-size: 1.0625rem;
+}
+
+.solution-detail__check {
+  color: var(--color-blue);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .solution-detail {
+    padding: 2rem;
+  }
+  
+  .solution-detail__header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

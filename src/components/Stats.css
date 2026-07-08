@@ -1,0 +1,138 @@
+/* ============================================
+   Stats Section
+   ============================================ */
+.stats {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.stats__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #e2e8f0 40%,
+    #cbd5e1 100%
+  );
+  z-index: 0;
+}
+
+.stats__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 30% 50%,
+    rgba(37, 99, 235, 0.1) 0%,
+    transparent 60%
+  );
+}
+
+.stats__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 70% 50%,
+    rgba(232, 124, 62, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+/* ============================================
+   Inner Grid
+   ============================================ */
+.stats__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stats__inner .stats__item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stats__inner.is-visible .stats__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   Stat Item
+   ============================================ */
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  position: relative;
+}
+
+.stats__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(26, 54, 93, 0.1),
+    transparent
+  );
+}
+
+.stats__value {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.stats__label {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .stats {
+    padding: 4rem 0;
+  }
+
+  .stats__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stats__item:nth-child(2)::after {
+    display: none;
+  }
+
+  .stats__item::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats__inner {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .stats__item {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,92 @@
+/* ============================================
+   Who We Serve Section
+   ============================================ */
+.serve {
+  position: relative;
+  padding: 7rem 0;
+  background: var(--bg-dark-2); /* slightly different background for contrast */
+  overflow: hidden;
+}
+
+/* ============================================
+   Grid
+   ============================================ */
+.serve__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.serve__grid .serve__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.serve__grid.is-visible .serve__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   Item
+   ============================================ */
+.serve__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  cursor: default;
+}
+
+.serve__item:hover {
+  transform: translateY(-4px) !important; /* override the stagger transform on hover */
+  box-shadow: var(--shadow-md);
+  border-color: rgba(26, 54, 93, 0.15);
+}
+
+.serve__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-blue);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.serve__item:hover .serve__icon-wrap {
+  background: var(--color-blue);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.serve__name {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .serve {
+    padding: 5rem 0;
+  }
+
+  .serve__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .serve__grid {
+    grid-template-columns: 1fr;
+  }
+}
