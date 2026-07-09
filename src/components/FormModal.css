@@ -2,26 +2,38 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 1.25rem;
   background: rgba(10, 15, 30, 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+.form-modal__overlay--open {
+  display: flex;
   animation: form-modal-fade 0.2s ease-out;
 }
 
 .form-modal__panel {
   position: relative;
   width: 100%;
-  max-width: 560px;
-  height: min(85vh, 720px);
+  max-width: 480px;
+  max-height: 92vh;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 30px 80px rgba(10, 15, 30, 0.4);
   overflow: hidden;
   animation: form-modal-pop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll container: the panel hugs the form's real height, but if the
+   form ever grows taller than the viewport it scrolls instead of clipping. */
+.form-modal__scroll {
+  max-height: 92vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .form-modal__close {
@@ -32,8 +44,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border: none;
   border-radius: 50%;
   background: rgba(15, 23, 42, 0.06);
@@ -48,10 +60,15 @@
 }
 
 .form-modal__iframe {
+  display: block;
   width: 100%;
-  height: 100%;
+  /* Fallback height only for the brief moment before HighLevel's
+     form_embed.js sets the exact content height inline (an inline style
+     wins over this rule, so the iframe ends up hugging the form with no
+     leftover white space). Using min-height here would force the iframe
+     taller than short forms and reintroduce the gap. */
+  height: 540px;
   border: none;
-  border-radius: 16px;
 }
 
 @keyframes form-modal-fade {
@@ -67,8 +84,5 @@
 @media (max-width: 640px) {
   .form-modal__overlay {
     padding: 0.75rem;
-  }
-  .form-modal__panel {
-    height: min(90vh, 760px);
   }
 }

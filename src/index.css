@@ -9,13 +9,13 @@
   --color-gold: #d4972a;
   --color-orange-light: #f4a261;
 
-  /* Backgrounds — LIGHT MODE */
+  /* Backgrounds - LIGHT MODE */
   --bg-dark: #ffffff;
   --bg-dark-2: #f8fafc;
   --bg-card: rgba(26, 54, 93, 0.04);
   --bg-card-hover: rgba(26, 54, 93, 0.08);
 
-  /* Text — LIGHT MODE */
+  /* Text - LIGHT MODE */
   --text-main: #1a202c;
   --text-muted: #4a5568;
   --text-dim: #718096;
@@ -31,7 +31,7 @@
   --radius-xl: 28px;
   --radius-full: 9999px;
 
-  /* Shadows — lighter for light mode */
+  /* Shadows - lighter for light mode */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -132,7 +132,7 @@ img {
 }
 
 /* ============================================
-   Glassmorphism Card — Light Mode
+   Glassmorphism Card - Light Mode
    ============================================ */
 .glass-card {
   background: #ffffff;

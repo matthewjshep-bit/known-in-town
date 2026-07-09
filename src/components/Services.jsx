@@ -1,7 +1,7 @@
 import React from 'react';
 import { Star, MessageSquare, RefreshCcw } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useFormModal } from '../context/FormModalContext';
 import './Services.css';
 
 const services = [
@@ -23,6 +23,8 @@ const services = [
 ];
 
 export default function Services() {
+  const { openForm } = useFormModal();
+
   return (
     <section id="how-it-works" className="services">
       <div className="container">
@@ -41,9 +43,9 @@ export default function Services() {
         </div>
 
         <div className="services__actions animate-fade-in-up delay-300" style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <Link to="/solutions" className="btn-secondary">
-            View Detailed Solutions
-          </Link>
+          <button type="button" className="btn-primary" onClick={openForm}>
+            Try it Out
+          </button>
         </div>
       </div>
     </section>
