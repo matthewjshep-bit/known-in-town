@@ -82,6 +82,15 @@
   padding-left: 4px;
 }
 
+.footer__link--button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
 /* Contact */
 .footer__contact {
   list-style: none;

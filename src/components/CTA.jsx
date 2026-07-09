@@ -1,8 +1,10 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useFormModal } from '../context/FormModalContext';
 import './CTA.css';
 
 export default function CTA() {
   const [ref, isVisible] = useScrollAnimation(0.2);
+  const { openForm } = useFormModal();
 
   return (
     <section id="contact" className="cta" ref={ref}>
@@ -24,9 +26,9 @@ export default function CTA() {
         <p className="cta__subtitle">
           You do the work. We make sure the whole town knows about it.
         </p>
-        <a href="#contact" className="btn-primary cta__button">
-          Get Known Today
-        </a>
+        <button type="button" className="btn-primary cta__button" onClick={openForm}>
+          Try it Out
+        </button>
         <p className="cta__note">
           No contracts. No setup fees. Results in 30 days.
         </p>

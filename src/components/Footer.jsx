@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useFormModal } from '../context/FormModalContext';
 import './Footer.css';
 
 const quickLinks = [
@@ -8,10 +9,12 @@ const quickLinks = [
   { label: 'Who We Serve', href: '/#who-we-serve' },
   { label: 'Why Us', href: '/#why-us' },
   { label: 'Solutions', href: '/solutions' },
-  { label: 'Get Started', href: '/#contact' },
+  { label: 'Try it Out', action: 'openForm' },
 ];
 
 export default function Footer() {
+  const { openForm } = useFormModal();
+
   return (
     <footer className="footer">
       <div className="container">
@@ -32,6 +35,19 @@ export default function Footer() {
             <h4 className="footer__col-title">Quick Links</h4>
             <ul className="footer__links">
               {quickLinks.map((link) => {
+                if (link.action === 'openForm') {
+                  return (
+                    <li key={link.label}>
+                      <button
+                        type="button"
+                        className="footer__link footer__link--button"
+                        onClick={openForm}
+                      >
+                        {link.label}
+                      </button>
+                    </li>
+                  );
+                }
                 if (link.href.startsWith('/#')) {
                   return (
                     <li key={link.label}>

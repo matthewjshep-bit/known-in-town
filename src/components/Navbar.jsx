@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useFormModal } from '../context/FormModalContext';
 import './Navbar.css';
 
 const navLinks = [
@@ -13,6 +14,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openForm } = useFormModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,9 +63,9 @@ export default function Navbar() {
           })}
         </div>
 
-        <a href="/#contact" className="navbar__cta btn-primary">
-          Get Started
-        </a>
+        <button type="button" className="navbar__cta btn-primary" onClick={openForm}>
+          Try it Out
+        </button>
 
         <button
           className="navbar__hamburger"
@@ -101,9 +103,13 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <a href="/#contact" className="navbar__mobile-cta btn-primary" onClick={handleLinkClick}>
-            Get Started
-          </a>
+          <button
+            type="button"
+            className="navbar__mobile-cta btn-primary"
+            onClick={() => { handleLinkClick(); openForm(); }}
+          >
+            Try it Out
+          </button>
         </div>
       </div>
     </nav>

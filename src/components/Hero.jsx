@@ -1,7 +1,9 @@
-import { Star, ArrowRight } from 'lucide-react';
+import { useFormModal } from '../context/FormModalContext';
 import './Hero.css';
 
 export default function Hero() {
+  const { openForm } = useFormModal();
+
   return (
     <section className="hero">
       {/* Animated gradient blobs */}
@@ -25,13 +27,9 @@ export default function Hero() {
         </p>
 
         <div className="hero__actions animate-fade-in-up delay-300">
-          <a href="#contact" className="btn-primary hero__btn-primary">
-            Get Known Today
-          </a>
-          <a href="#how-it-works" className="btn-secondary hero__btn-secondary">
-            See How It Works
-            <ArrowRight size={18} />
-          </a>
+          <button type="button" className="btn-primary hero__btn-primary" onClick={openForm}>
+            Try it Out
+          </button>
         </div>
 
         <div className="hero__stats animate-fade-in-up delay-500">
