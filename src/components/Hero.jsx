@@ -17,11 +17,11 @@ export default function Hero() {
 
       <div className="hero__content container">
         <h1 className="hero__title animate-fade-in-up delay-100">
-          Become the most <span className="text-gradient">known and trusted</span> pro in your town.
+          <span className="text-gradient">Known In Town</span> makes you the most known and trusted pro in your area.
         </h1>
 
         <p className="hero__subtitle animate-fade-in-up delay-200">
-          We help local home service businesses get more 5-star reviews, capture every lead 24/7, and turn past customers into repeat jobs.
+          Known In Town is the local marketing platform that helps home service businesses — plumbers, roofers, HVAC, and electricians — get more 5-star reviews, capture every lead 24/7, and turn past customers into repeat jobs.
         </p>
 
         <div className="hero__actions animate-fade-in-up delay-300">

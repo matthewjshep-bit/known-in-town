@@ -58,14 +58,14 @@ export default function Footer() {
             <ul className="footer__contact">
               <li className="footer__contact-item">
                 <Mail size={16} className="footer__contact-icon" />
-                <a href="mailto:hello@knownintown.com" className="footer__link">
-                  hello@knownintown.com
+                <a href="mailto:info@knownintown.com" className="footer__link">
+                  info@knownintown.com
                 </a>
               </li>
               <li className="footer__contact-item">
                 <Phone size={16} className="footer__contact-icon" />
-                <a href="tel:+18005551234" className="footer__link">
-                  (800) 555-1234
+                <a href="tel:+14256202863" className="footer__link">
+                  (425) 620-2863
                 </a>
               </li>
               <li className="footer__contact-item">
