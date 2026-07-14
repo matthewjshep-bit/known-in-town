@@ -5,6 +5,7 @@ import FormModal from './components/FormModal';
 import { FormModalProvider } from './context/FormModalContext';
 import Home from './pages/Home';
 import Solutions from './pages/Solutions';
+import PortfolioPage from './pages/Portfolio';
 import './index.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/solutions" element={<Solutions />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
       </Routes>
       <Footer />
       <FormModal />
