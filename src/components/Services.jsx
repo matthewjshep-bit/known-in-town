@@ -8,7 +8,7 @@ const services = [
   {
     icon: Globe,
     title: 'AI Website Design',
-    description: 'Stunning, modern websites designed by AI—built to convert visitors into paying customers and dominate local search.',
+    description: 'Handcrafted, modern websites powered by AI—built smart to convert visitors into paying customers and dominate local search.',
     featured: true,
   },
   {

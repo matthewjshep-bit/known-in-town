@@ -7,7 +7,7 @@ const detailedSolutions = [
   {
     icon: Globe,
     title: 'AI Website Design',
-    subtitle: 'Stunning Sites Built by Intelligence',
+    subtitle: 'Handcrafted Sites, Powered by AI',
     featured: true,
     features: [
       'Custom AI-designed websites tailored to your trade and local market.',
@@ -16,7 +16,7 @@ const detailedSolutions = [
       'AI-generated copy that speaks directly to your ideal customer.',
       'Ongoing design updates and A/B testing powered by performance data.'
     ],
-    description: 'Your website is your digital storefront—and most contractor sites look like they were built in 2012. We use AI to design and build modern, high-converting websites that make you look like the most professional operation in town, and load fast enough to keep Google happy.'
+    description: 'Your website is your digital storefront—and most contractor sites look like they were built in 2012. We handcraft modern, high-converting websites enhanced with AI intelligence—so every page is strategically built to turn visitors into customers and keep you at the top of Google.'
   },
   {
     icon: Star,
