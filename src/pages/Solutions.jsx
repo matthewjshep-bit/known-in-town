@@ -1,9 +1,23 @@
 import React from 'react';
-import { Star, MessageSquare, RefreshCcw, CheckCircle2 } from 'lucide-react';
+import { Star, MessageSquare, RefreshCcw, CheckCircle2, Globe } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Solutions.css';
 
 const detailedSolutions = [
+  {
+    icon: Globe,
+    title: 'AI Website Design',
+    subtitle: 'Stunning Sites Built by Intelligence',
+    featured: true,
+    features: [
+      'Custom AI-designed websites tailored to your trade and local market.',
+      'Mobile-first, lightning-fast pages optimized for Google search rankings.',
+      'Built-in lead capture forms, click-to-call buttons, and booking integrations.',
+      'AI-generated copy that speaks directly to your ideal customer.',
+      'Ongoing design updates and A/B testing powered by performance data.'
+    ],
+    description: 'Your website is your digital storefront—and most contractor sites look like they were built in 2012. We use AI to design and build modern, high-converting websites that make you look like the most professional operation in town, and load fast enough to keep Google happy.'
+  },
   {
     icon: Star,
     title: 'Reputation Engine',
@@ -68,7 +82,7 @@ export default function Solutions() {
             return (
               <div 
                 key={solution.title} 
-                className={`solution-detail glass-card ${isVisible ? 'is-visible' : ''}`}
+                className={`solution-detail glass-card ${solution.featured ? 'solution-detail--featured' : ''} ${isVisible ? 'is-visible' : ''}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="solution-detail__header">
