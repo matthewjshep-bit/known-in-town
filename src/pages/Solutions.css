@@ -137,11 +137,21 @@
   margin-top: 0.25rem;
 }
 
+.solution-detail__actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.solution-detail__link {
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+}
+
 @media (max-width: 768px) {
   .solution-detail {
     padding: 2rem;
   }
-  
+
   .solution-detail__header {
     flex-direction: column;
     gap: 1rem;
