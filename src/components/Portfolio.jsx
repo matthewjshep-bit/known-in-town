@@ -12,6 +12,14 @@ const projects = [
     description: 'A modern, conversion-focused website for a mortgage lending company — built to establish trust, capture leads, and simplify the loan process.',
     tags: ['Website Design', 'Lead Generation', 'Financial Services'],
   },
+  {
+    name: 'PRVT MKT',
+    url: 'https://prvtmkt.ai',
+    logo: '/portfolio/prvtmkt-logo.svg',
+    screenshot: '/portfolio/prvtmkt-screenshot.png',
+    description: 'An AI-powered real estate platform that delivers instant cash offers for homeowners — designed for speed, trust, and seamless lead conversion.',
+    tags: ['Website Design', 'AI Integration', 'Real Estate'],
+  },
 ];
 
 export default function Portfolio() {
