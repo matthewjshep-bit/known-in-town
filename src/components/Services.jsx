@@ -1,10 +1,16 @@
 import React from 'react';
-import { Star, MessageSquare, RefreshCcw } from 'lucide-react';
+import { Star, MessageSquare, RefreshCcw, Globe } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useFormModal } from '../context/FormModalContext';
 import './Services.css';
 
 const services = [
+  {
+    icon: Globe,
+    title: 'AI Website Design',
+    description: 'Stunning, modern websites designed by AI—built to convert visitors into paying customers and dominate local search.',
+    featured: true,
+  },
   {
     icon: Star,
     title: 'Reputation Engine',
@@ -59,7 +65,7 @@ function ServiceCard({ service, index }) {
   return (
     <div
       ref={ref}
-      className={`services__card glass-card scroll-reveal scroll-reveal-delay-${index + 1} ${
+      className={`services__card glass-card ${service.featured ? 'services__card--featured' : ''} scroll-reveal scroll-reveal-delay-${index + 1} ${
         isVisible ? 'is-visible' : ''
       }`}
     >
