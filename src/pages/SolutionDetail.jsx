@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 import { solutions } from '../data/solutions';
 import { useFormModal } from '../context/FormModalContext';
 import CTA from '../components/CTA';
@@ -40,10 +40,14 @@ export default function SolutionDetail() {
           <p className="solution-page__intro animate-fade-in-up delay-300">
             {solution.heroIntro}
           </p>
-          <div className="animate-fade-in-up delay-400">
+          <div className="solution-page__hero-actions animate-fade-in-up delay-400">
             <button type="button" className="btn-primary" onClick={openForm}>
-              Try it Out
+              Chat with Us
             </button>
+            <a href="tel:+14256202863" className="btn-secondary">
+              <Phone size={18} />
+              +1 425-620-2863
+            </a>
           </div>
         </div>
       </div>

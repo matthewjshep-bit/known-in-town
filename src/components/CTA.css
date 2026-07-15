@@ -154,10 +154,23 @@
 }
 
 /* Button */
+.cta__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
 .cta__button {
   font-size: 1.25rem;
   padding: 1.125rem 3rem;
-  margin-bottom: 1.5rem;
+}
+
+.cta__phone {
+  font-size: 1.125rem;
+  padding: 1.125rem 2.5rem;
 }
 
 /* Note */
@@ -183,7 +196,8 @@
     font-size: 1.0625rem;
   }
 
-  .cta__button {
+  .cta__button,
+  .cta__phone {
     width: 100%;
     max-width: 320px;
   }

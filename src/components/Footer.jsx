@@ -9,7 +9,7 @@ const quickLinks = [
   { label: 'Who We Serve', href: '/#who-we-serve' },
   { label: 'Why Us', href: '/#why-us' },
   { label: 'Solutions', href: '/solutions' },
-  { label: 'Try it Out', action: 'openForm' },
+  { label: 'Chat with Us', action: 'openForm' },
 ];
 
 export default function Footer() {

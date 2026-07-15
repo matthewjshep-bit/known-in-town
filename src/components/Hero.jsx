@@ -1,3 +1,4 @@
+import { Phone } from 'lucide-react';
 import { useFormModal } from '../context/FormModalContext';
 import './Hero.css';
 
@@ -28,8 +29,12 @@ export default function Hero() {
 
         <div className="hero__actions animate-fade-in-up delay-300">
           <button type="button" className="btn-primary hero__btn-primary" onClick={openForm}>
-            Try it Out
+            Chat with Us
           </button>
+          <a href="tel:+14256202863" className="btn-secondary hero__btn-secondary">
+            <Phone size={18} />
+            +1 425-620-2863
+          </a>
         </div>
 
         <div className="hero__stats animate-fade-in-up delay-500">

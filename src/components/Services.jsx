@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import { solutions } from '../data/solutions';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useFormModal } from '../context/FormModalContext';
@@ -26,10 +26,14 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="services__actions animate-fade-in-up delay-300" style={{ textAlign: 'center', marginTop: '4rem' }}>
+        <div className="services__actions animate-fade-in-up delay-300" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginTop: '4rem' }}>
           <button type="button" className="btn-primary" onClick={openForm}>
-            Try it Out
+            Chat with Us
           </button>
+          <a href="tel:+14256202863" className="btn-secondary">
+            <Phone size={18} />
+            +1 425-620-2863
+          </a>
         </div>
       </div>
     </section>

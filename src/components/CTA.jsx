@@ -1,3 +1,4 @@
+import { Phone } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useFormModal } from '../context/FormModalContext';
 import './CTA.css';
@@ -26,9 +27,15 @@ export default function CTA() {
         <p className="cta__subtitle">
           You do the work. We make sure the whole town knows about it.
         </p>
-        <button type="button" className="btn-primary cta__button" onClick={openForm}>
-          Try it Out
-        </button>
+        <div className="cta__actions">
+          <button type="button" className="btn-primary cta__button" onClick={openForm}>
+            Chat with Us
+          </button>
+          <a href="tel:+14256202863" className="btn-secondary cta__phone">
+            <Phone size={20} />
+            +1 425-620-2863
+          </a>
+        </div>
         <p className="cta__note">
           No contracts. No setup fees. Results in 30 days.
         </p>

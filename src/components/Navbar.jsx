@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useFormModal } from '../context/FormModalContext';
 import './Navbar.css';
@@ -64,9 +64,15 @@ export default function Navbar() {
           })}
         </div>
 
-        <button type="button" className="navbar__cta btn-primary" onClick={openForm}>
-          Try it Out
-        </button>
+        <div className="navbar__actions">
+          <a href="tel:+14256202863" className="navbar__phone">
+            <Phone size={16} />
+            +1 425-620-2863
+          </a>
+          <button type="button" className="navbar__cta btn-primary" onClick={openForm}>
+            Chat with Us
+          </button>
+        </div>
 
         <button
           className="navbar__hamburger"
@@ -104,12 +110,20 @@ export default function Navbar() {
               </Link>
             );
           })}
+          <a
+            href="tel:+14256202863"
+            className="navbar__mobile-phone"
+            onClick={handleLinkClick}
+          >
+            <Phone size={18} />
+            +1 425-620-2863
+          </a>
           <button
             type="button"
             className="navbar__mobile-cta btn-primary"
             onClick={() => { handleLinkClick(); openForm(); }}
           >
-            Try it Out
+            Chat with Us
           </button>
         </div>
       </div>
