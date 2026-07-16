@@ -13,7 +13,7 @@ const quickLinks = [
 ];
 
 const solutionLinks = [
-  { label: 'AI Website Design', href: '/solutions/ai-website-design' },
+  { label: 'We Build Smart Websites', href: '/solutions/ai-website-design' },
   { label: 'Reputation Engine', href: '/solutions/reputation-engine' },
   { label: '24/7 Lead Capture', href: '/solutions/lead-capture' },
   { label: 'Customer Reactivation', href: '/solutions/customer-reactivation' },

@@ -4,7 +4,7 @@ export const solutions = [
   {
     slug: 'ai-website-design',
     icon: Globe,
-    title: 'AI Website Design',
+    title: 'We Build Smart Websites',
     subtitle: 'Handcrafted Sites, Powered by AI',
     featured: true,
     cardDescription:

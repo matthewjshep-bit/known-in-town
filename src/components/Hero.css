@@ -180,17 +180,6 @@
   font-size: 1.0625rem;
 }
 
-.hero__offer-note {
-  font-size: 0.9375rem;
-  color: var(--text-muted);
-  margin: -2.75rem 0 3.5rem;
-}
-
-.hero__offer-note strong {
-  color: var(--color-orange);
-  font-weight: 600;
-}
-
 /* ============================================
    Stats Bar
    ============================================ */

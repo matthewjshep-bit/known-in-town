@@ -37,10 +37,6 @@ export default function Hero() {
           </a>
         </div>
 
-        <p className="hero__offer-note animate-fade-in-up delay-400">
-          We build your new website <strong>before you pay a dollar</strong>—see it finished, then decide.
-        </p>
-
         <div className="hero__stats animate-fade-in-up delay-500">
           <div className="hero__stat">
             <span className="hero__stat-number">8.2K+</span>
