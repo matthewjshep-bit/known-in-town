@@ -24,7 +24,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero__subtitle animate-fade-in-up delay-200">
-          The local marketing platform for home service businesses—plumbers, roofers, HVAC, and electricians—that gets you more 5-star reviews, captures every lead 24/7, and turns past customers into repeat jobs.
+          More 5-star reviews, every lead answered 24/7, and past customers coming back—built for home service pros.
         </p>
 
         <div className="hero__actions animate-fade-in-up delay-300">
