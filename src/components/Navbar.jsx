@@ -5,6 +5,7 @@ import { useFormModal } from '../context/FormModalContext';
 import './Navbar.css';
 
 const navLinks = [
+  { label: 'The Directory', href: 'https://seattle.knownintown.com/', external: true, featured: true },
   { label: 'How It Works', href: '/#how-it-works' },
   { label: 'Who We Serve', href: '/#who-we-serve' },
   { label: 'Why Us', href: '/#why-us' },
@@ -47,16 +48,17 @@ export default function Navbar() {
 
         <div className="navbar__links">
           {navLinks.map((link) => {
-            if (link.href.startsWith('/#')) {
+            const className = `navbar__link ${link.featured ? 'navbar__link--featured' : ''}`;
+            if (link.external || link.href.startsWith('/#')) {
               return (
-                <a key={link.label} href={link.href} className="navbar__link">
+                <a key={link.label} href={link.href} className={className}>
                   <span className="navbar__link-text">{link.label}</span>
                   <span className="navbar__link-underline" />
                 </a>
               );
             }
             return (
-              <Link key={link.label} to={link.href} className="navbar__link">
+              <Link key={link.label} to={link.href} className={className}>
                 <span className="navbar__link-text">{link.label}</span>
                 <span className="navbar__link-underline" />
               </Link>
@@ -87,12 +89,13 @@ export default function Navbar() {
       <div className={`navbar__mobile ${mobileOpen ? 'navbar__mobile--open' : ''}`}>
         <div className="navbar__mobile-inner">
           {navLinks.map((link) => {
-            if (link.href.startsWith('/#')) {
+            const className = `navbar__mobile-link ${link.featured ? 'navbar__mobile-link--featured' : ''}`;
+            if (link.external || link.href.startsWith('/#')) {
               return (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="navbar__mobile-link"
+                  className={className}
                   onClick={handleLinkClick}
                 >
                   {link.label}
@@ -103,7 +106,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 to={link.href}
-                className="navbar__mobile-link"
+                className={className}
                 onClick={handleLinkClick}
               >
                 {link.label}

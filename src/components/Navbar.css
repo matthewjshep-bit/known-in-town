@@ -93,6 +93,24 @@
   transform: translateX(-50%) scaleX(1);
 }
 
+/* Featured link — The Directory */
+.navbar__link--featured .navbar__link-text {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar__link--featured .navbar__link-underline {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar__link--featured:hover .navbar__link-text {
+  filter: brightness(1.15);
+}
+
 /* CTA Button */
 .navbar__actions {
   display: flex;
@@ -191,6 +209,15 @@
 .navbar__mobile-link:hover {
   color: var(--text-main);
   background: rgba(26, 54, 93, 0.04);
+}
+
+.navbar__mobile-link--featured {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar__mobile-phone {
