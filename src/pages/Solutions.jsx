@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { solutions } from '../data/solutions';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Solutions.css';
 
 export default function Solutions() {
   const [ref, isVisible] = useScrollAnimation(0.1);
+
+  usePageMeta(
+    'Solutions',
+    'Explore the Known In Town growth toolkit: AI website design, automated 5-star reviews, 24/7 lead capture, customer reactivation, and a dedicated communications app.'
+  );
 
   return (
     <div className="solutions-page">

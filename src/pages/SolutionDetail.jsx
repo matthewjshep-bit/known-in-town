@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 import { solutions } from '../data/solutions';
+import { usePageMeta } from '../hooks/usePageMeta';
 import { useFormModal } from '../context/FormModalContext';
 import CTA from '../components/CTA';
 import './SolutionDetail.css';
@@ -11,6 +12,8 @@ export default function SolutionDetail() {
   const { openForm } = useFormModal();
 
   const solution = solutions.find((s) => s.slug === slug);
+
+  usePageMeta(solution?.title, solution?.cardDescription);
 
   if (!solution) {
     return <Navigate to="/solutions" replace />;

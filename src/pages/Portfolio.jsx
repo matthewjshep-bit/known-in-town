@@ -1,8 +1,14 @@
 import React from 'react';
 import Portfolio from '../components/Portfolio';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Portfolio.css';
 
 export default function PortfolioPage() {
+  usePageMeta(
+    'Portfolio',
+    'Real projects, real results. See the websites and growth systems Known In Town has built for local home service businesses.'
+  );
+
   return (
     <div className="portfolio-page">
       <div className="portfolio-hero">

@@ -12,7 +12,7 @@
    ============================================ */
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
 }
@@ -155,6 +155,16 @@
 /* ============================================
    Responsive
    ============================================ */
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 0 0;

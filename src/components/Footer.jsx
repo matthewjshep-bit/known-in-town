@@ -8,8 +8,16 @@ const quickLinks = [
   { label: 'How It Works', href: '/#how-it-works' },
   { label: 'Who We Serve', href: '/#who-we-serve' },
   { label: 'Why Us', href: '/#why-us' },
-  { label: 'Solutions', href: '/solutions' },
+  { label: 'Portfolio', href: '/portfolio' },
   { label: 'Chat with Us', action: 'openForm' },
+];
+
+const solutionLinks = [
+  { label: 'AI Website Design', href: '/solutions/ai-website-design' },
+  { label: 'Reputation Engine', href: '/solutions/reputation-engine' },
+  { label: '24/7 Lead Capture', href: '/solutions/lead-capture' },
+  { label: 'Customer Reactivation', href: '/solutions/customer-reactivation' },
+  { label: 'Communications App', href: '/solutions/communications-app' },
 ];
 
 export default function Footer() {
@@ -65,6 +73,20 @@ export default function Footer() {
                   </li>
                 );
               })}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div className="footer__col">
+            <h4 className="footer__col-title">Solutions</h4>
+            <ul className="footer__links">
+              {solutionLinks.map((link) => (
+                <li key={link.label}>
+                  <Link to={link.href} className="footer__link">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

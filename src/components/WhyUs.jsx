@@ -7,7 +7,7 @@ const benefits = [
     icon: Zap,
     title: 'Set It & Forget It',
     description:
-      'Everything runs automatically after setup. No apps to learn, no dashboards to check.',
+      'The engine runs 24/7 in the background—every new lead and review shows up as a buzz in your pocket.',
   },
   {
     icon: Shield,

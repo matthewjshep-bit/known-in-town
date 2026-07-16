@@ -24,7 +24,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero__subtitle animate-fade-in-up delay-200">
-          Known In Town is the local marketing platform that helps home service businesses like plumbers, roofers, HVAC, and electricians get more 5-star reviews, capture every lead 24/7, and turn past customers into repeat jobs.
+          The local marketing platform for home service businesses—plumbers, roofers, HVAC, and electricians—that gets you more 5-star reviews, captures every lead 24/7, and turns past customers into repeat jobs.
         </p>
 
         <div className="hero__actions animate-fade-in-up delay-300">
@@ -36,6 +36,10 @@ export default function Hero() {
             +1 425-620-2863
           </a>
         </div>
+
+        <p className="hero__offer-note animate-fade-in-up delay-400">
+          We build your new website <strong>before you pay a dollar</strong>—see it finished, then decide.
+        </p>
 
         <div className="hero__stats animate-fade-in-up delay-500">
           <div className="hero__stat">
